@@ -1,36 +1,113 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Yamagishi Lab Website
+
+東京農工大学 山岸研究室の公式ウェブサイト
+
+**Live Site**: https://yamagishi-lab.vercel.app
+
+## Overview
+
+超薄膜エレクトロニクスと柔軟電子デバイスの研究を行う山岸研究室のウェブサイトです。日本語・英語の多言語対応、レスポンシブデザインを採用しています。
+
+## Tech Stack
+
+- **Framework**: [Next.js 16](https://nextjs.org/) (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Animation**: Framer Motion
+- **Deployment**: Vercel
+- **i18n**: Custom implementation with JSON dictionaries
+
+## Features
+
+- Multi-language support (Japanese / English)
+- Responsive design (Mobile / Tablet / Desktop)
+- Smooth animations with Framer Motion
+- Image carousel on hero section
+- Static site generation for optimal performance
+
+## Project Structure
+
+```
+src/
+├── app/
+│   └── [locale]/          # Locale-based routing
+│       ├── page.tsx       # Home page
+│       ├── research/      # Research page
+│       ├── team/          # Team page
+│       ├── achievements/  # Publications page
+│       ├── news/          # News page
+│       └── contact/       # Contact page
+├── components/
+│   ├── layout/            # Header, Footer
+│   ├── sections/          # Page sections
+│   ├── ui/                # Reusable UI components
+│   └── animations/        # Animation wrappers
+├── dictionaries/          # i18n JSON files
+│   ├── ja.json
+│   └── en.json
+├── lib/                   # Utilities
+└── types/                 # TypeScript types
+```
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+
+- npm / yarn / pnpm
+
+### Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/FallseF/yamagishi-lab.git
+cd yamagishi-lab
+
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+# Production build
+npm run build
 
-## Learn More
+# Start production server
+npm start
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project is configured for automatic deployment on Vercel. Push to `main` branch to trigger a new deployment.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Customization
 
-## Deploy on Vercel
+### Adding/Editing Content
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Content is managed through dictionary files:
+- `src/dictionaries/ja.json` - Japanese content
+- `src/dictionaries/en.json` - English content
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Adding Images
+
+Place images in `public/images/` directory. Current images:
+- `hero-robothand.jpg` - Hero carousel image
+- `team-photo.jpg` - Team section photo
+- `profile.jpg` - PI profile photo
+- `research1.png`, `research2.png`, `research3.png` - Research area images
+- `tuat-logo.jpg` - University logo
+
+## License
+
+All rights reserved. This project is for the Yamagishi Laboratory at Tokyo University of Agriculture and Technology.
+
+## Contact
+
+For inquiries about the website or research collaboration:
+- Email: yamagishi@ntech.t.u-tokyo.ac.jp (remove "nospam-" prefix)
