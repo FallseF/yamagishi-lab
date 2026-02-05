@@ -2,13 +2,36 @@ import { getDictionary } from '@/lib/i18n/dictionaries';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { FadeIn } from '@/components/animations/FadeIn';
+import { getResearchAreas, getLocalizedValue } from '@/sanity/queries';
+import { urlFor } from '@/sanity/client';
 import Image from 'next/image';
 import type { Locale } from '@/types';
 import type { Metadata } from 'next';
+import type { SanityImageSource } from '@sanity/image-url/lib/types/types';
 
 type Props = {
   params: Promise<{ locale: string }>;
 };
+
+type ResearchArea = {
+  _id: string;
+  title: { ja?: string; en?: string };
+  image?: SanityImageSource;
+  summary: {
+    challenge: { ja?: string; en?: string };
+    approach: { ja?: string; en?: string };
+    outcome: { ja?: string; en?: string };
+  };
+  description: { ja?: string[]; en?: string[] };
+  order: number;
+};
+
+// Map research areas to local images (until images are uploaded to Sanity)
+const researchImages = [
+  '/images/research1.png',
+  '/images/research2.png',
+  '/images/research3.png',
+];
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
@@ -22,6 +45,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function ResearchPage({ params }: Props) {
   const { locale } = await params;
   const dict = await getDictionary(locale as Locale);
+  const researchAreas = await getResearchAreas();
 
   return (
     <div className="min-h-screen bg-[var(--background)]">
@@ -46,68 +70,79 @@ export default async function ResearchPage({ params }: Props) {
         </div>
       </section>
 
-      {/* 3 Pillars Section */}
+      {/* Research Areas from Sanity */}
       <main className="px-[var(--page-padding-mobile)] md:px-[var(--page-padding-desktop)] pb-20">
         <div className="max-w-5xl mx-auto">
           <div className="space-y-24">
-            {dict.research.areas.map((area, index) => (
-              <FadeIn key={index} delay={index * 0.1}>
-                <article className="relative">
+            {researchAreas.map((area: ResearchArea, index: number) => {
+              const title = getLocalizedValue(area.title, locale as Locale) || '';
+              const cleanTitle = title.replace(/研究分野\d+[:：]\s*/, '').replace(/Research Area \d+[:：]\s*/, '');
+              const descriptions = locale === 'ja' ? area.description?.ja : area.description?.en;
 
-                  <div className="grid md:grid-cols-2 gap-10 items-start">
-                    {/* Image */}
-                    <div className={index % 2 === 1 ? 'md:order-2' : ''}>
-                      <div className="relative aspect-[4/3] overflow-hidden bg-[var(--background-secondary)]">
-                        <Image
-                          src={area.image}
-                          alt={area.title}
-                          fill
-                          className="object-contain"
-                        />
+              return (
+                <FadeIn key={area._id} delay={index * 0.1}>
+                  <article className="relative">
+                    <div className="grid md:grid-cols-2 gap-10 items-start">
+                      {/* Image */}
+                      <div className={index % 2 === 1 ? 'md:order-2' : ''}>
+                        <div className="relative aspect-[4/3] overflow-hidden bg-[var(--background-secondary)]">
+                          <Image
+                            src={area.image ? urlFor(area.image).width(800).height(600).url() : researchImages[index] || '/images/research1.png'}
+                            alt={title}
+                            fill
+                            className="object-contain"
+                          />
+                        </div>
+                      </div>
+
+                      {/* Content */}
+                      <div className={index % 2 === 1 ? 'md:order-1' : ''}>
+                        <h2 className="text-xl md:text-2xl font-bold mb-6 text-[var(--foreground)] leading-tight">
+                          {cleanTitle}
+                        </h2>
+
+                        {/* Key Points */}
+                        <div className="space-y-4 mb-6">
+                          <div className="py-3 border-b border-[var(--border-light)]">
+                            <span className="text-xs font-bold text-[var(--muted)] uppercase block mb-1">
+                              {dict.common.challenge}
+                            </span>
+                            <p className="text-sm text-[var(--foreground)]">
+                              {getLocalizedValue(area.summary?.challenge, locale as Locale)}
+                            </p>
+                          </div>
+
+                          <div className="py-3 border-b border-[var(--border-light)]">
+                            <span className="text-xs font-bold text-[var(--muted)] uppercase block mb-1">
+                              {dict.common.approach}
+                            </span>
+                            <p className="text-sm text-[var(--foreground)]">
+                              {getLocalizedValue(area.summary?.approach, locale as Locale)}
+                            </p>
+                          </div>
+
+                          <div className="py-3 border-b border-[var(--border-light)]">
+                            <span className="text-xs font-bold text-[var(--muted)] uppercase block mb-1">
+                              {dict.common.outcome}
+                            </span>
+                            <p className="text-sm text-[var(--foreground)]">
+                              {getLocalizedValue(area.summary?.outcome, locale as Locale)}
+                            </p>
+                          </div>
+                        </div>
+
+                        {/* Description */}
+                        <div className="space-y-4 text-[var(--muted)] text-sm leading-relaxed">
+                          {descriptions?.map((paragraph: string, pIndex: number) => (
+                            <p key={pIndex}>{paragraph}</p>
+                          ))}
+                        </div>
                       </div>
                     </div>
-
-                    {/* Content */}
-                    <div className={index % 2 === 1 ? 'md:order-1' : ''}>
-                      <h2 className="text-xl md:text-2xl font-bold mb-6 text-[var(--foreground)] leading-tight">
-                        {area.title.replace(/研究分野\d+[:：]\s*/, '').replace(/Research Area \d+[:：]\s*/, '')}
-                      </h2>
-
-                      {/* Key Points */}
-                      <div className="space-y-4 mb-6">
-                        <div className="py-3 border-b border-[var(--border-light)]">
-                          <span className="text-xs font-bold text-[var(--muted)] uppercase block mb-1">
-                            {dict.common.challenge}
-                          </span>
-                          <p className="text-sm text-[var(--foreground)]">{area.summary.challenge}</p>
-                        </div>
-
-                        <div className="py-3 border-b border-[var(--border-light)]">
-                          <span className="text-xs font-bold text-[var(--muted)] uppercase block mb-1">
-                            {dict.common.approach}
-                          </span>
-                          <p className="text-sm text-[var(--foreground)]">{area.summary.approach}</p>
-                        </div>
-
-                        <div className="py-3 border-b border-[var(--border-light)]">
-                          <span className="text-xs font-bold text-[var(--muted)] uppercase block mb-1">
-                            {dict.common.outcome}
-                          </span>
-                          <p className="text-sm text-[var(--foreground)]">{area.summary.outcome}</p>
-                        </div>
-                      </div>
-
-                      {/* Description */}
-                      <div className="space-y-4 text-[var(--muted)] text-sm leading-relaxed">
-                        {area.description.map((paragraph, pIndex) => (
-                          <p key={pIndex}>{paragraph}</p>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              </FadeIn>
-            ))}
+                  </article>
+                </FadeIn>
+              );
+            })}
           </div>
         </div>
       </main>

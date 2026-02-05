@@ -2,11 +2,27 @@ import { getDictionary } from '@/lib/i18n/dictionaries';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { FadeIn } from '@/components/animations/FadeIn';
+import { getPublications, getAwards, getLocalizedValue } from '@/sanity/queries';
 import type { Locale } from '@/types';
 import type { Metadata } from 'next';
 
 type Props = {
   params: Promise<{ locale: string }>;
+};
+
+type Publication = {
+  _id: string;
+  authors: string;
+  title: string;
+  journal: string;
+  doi?: string;
+  note?: string;
+};
+
+type Award = {
+  _id: string;
+  date: string;
+  title: { ja?: string; en?: string };
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -21,7 +37,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function AchievementsPage({ params }: Props) {
   const { locale } = await params;
   const dict = await getDictionary(locale as Locale);
-  const { publications, awards, grants } = dict.achievements;
+  const { grants } = dict.achievements;
+
+  // Fetch from Sanity
+  const publications = await getPublications();
+  const awards = await getAwards();
 
   return (
     <div className="min-h-screen bg-[var(--background)]">
@@ -49,13 +69,13 @@ export default async function AchievementsPage({ params }: Props) {
           <section className="mb-16">
             <FadeIn>
               <h2 className="text-sm font-bold tracking-[0.2em] text-[var(--foreground)] mb-8">
-                {publications.title}
+                {dict.achievements.publications.title}
               </h2>
             </FadeIn>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {publications.items.map((pub, index) => (
-                <FadeIn key={index} delay={index * 0.05}>
+              {publications.map((pub: Publication, index: number) => (
+                <FadeIn key={pub._id} delay={index * 0.05}>
                   {pub.doi ? (
                     <a
                       href={pub.doi}
@@ -128,16 +148,18 @@ export default async function AchievementsPage({ params }: Props) {
           <section className="mb-16">
             <FadeIn>
               <h2 className="text-sm font-bold tracking-[0.2em] text-[var(--foreground)] mb-6">
-                {awards.title}
+                {dict.achievements.awards.title}
               </h2>
             </FadeIn>
 
             <div className="space-y-0 border-t border-[var(--foreground)]">
-              {awards.items.map((award, index) => (
-                <FadeIn key={index} delay={index * 0.03}>
+              {awards.map((award: Award, index: number) => (
+                <FadeIn key={award._id} delay={index * 0.03}>
                   <div className="py-3 border-b border-[var(--border-light)] flex gap-6">
                     <span className="text-sm text-[var(--muted-light)] flex-shrink-0 min-w-[100px]">{award.date}</span>
-                    <p className="text-sm text-[var(--foreground)]">{award.title}</p>
+                    <p className="text-sm text-[var(--foreground)]">
+                      {getLocalizedValue(award.title, locale as Locale)}
+                    </p>
                   </div>
                 </FadeIn>
               ))}

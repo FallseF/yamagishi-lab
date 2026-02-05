@@ -2,6 +2,7 @@ import { getDictionary } from '@/lib/i18n/dictionaries';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { FadeIn } from '@/components/animations/FadeIn';
+import { getNews, getLocalizedValue, formatNewsDate } from '@/sanity/queries';
 import type { Locale } from '@/types';
 import type { Metadata } from 'next';
 
@@ -21,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function NewsPage({ params }: Props) {
   const { locale } = await params;
   const dict = await getDictionary(locale as Locale);
-  const news = dict.news;
+  const newsItems = await getNews();
 
   return (
     <div className="min-h-screen bg-[var(--background)]">
@@ -33,10 +34,10 @@ export default async function NewsPage({ params }: Props) {
           <div className="max-w-4xl mx-auto text-center">
             <FadeIn>
               <h1 className="text-sm md:text-base font-bold tracking-[0.2em] text-[var(--foreground)] mb-8">
-                {news.title}
+                {dict.news.title}
               </h1>
               <p className="text-3xl md:text-4xl font-bold mb-8 text-[var(--foreground)] text-multiline leading-tight">
-                {news.catchphrase}
+                {dict.news.catchphrase}
               </p>
             </FadeIn>
           </div>
@@ -45,19 +46,19 @@ export default async function NewsPage({ params }: Props) {
 
       <main className="px-[var(--page-padding-mobile)] md:px-[var(--page-padding-desktop)] pb-20">
         <div className="max-w-4xl mx-auto">
-          {/* News items */}
+          {/* News items from Sanity */}
           <FadeIn delay={0.2}>
             <div className="space-y-0 border-t border-[var(--foreground)]">
-              {news.items.map((item, index) => (
+              {newsItems.map((item: { _id: string; date: string; title: { ja?: string; en?: string } }) => (
                 <article
-                  key={index}
+                  key={item._id}
                   className="py-6 border-b border-[var(--border-light)] flex items-start gap-6"
                 >
                   <span className="text-sm text-[var(--muted-light)] flex-shrink-0 min-w-[100px]">
-                    {item.date}
+                    {formatNewsDate(item.date, locale as Locale)}
                   </span>
                   <p className="text-[var(--foreground)]">
-                    {item.text}
+                    {getLocalizedValue(item.title, locale as Locale)}
                   </p>
                 </article>
               ))}
@@ -67,7 +68,7 @@ export default async function NewsPage({ params }: Props) {
           {/* Note */}
           <FadeIn delay={0.3}>
             <p className="text-center text-[var(--muted)] text-sm mt-8">
-              {news.note}
+              {dict.news.note}
             </p>
           </FadeIn>
         </div>
