@@ -2,13 +2,15 @@
 
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import type { Dictionary } from '@/types';
+import Link from 'next/link';
+import type { Dictionary, Locale } from '@/types';
 
 interface NewsSectionProps {
   dict: Dictionary;
+  locale: Locale;
 }
 
-export function NewsSection({ dict }: NewsSectionProps) {
+export function NewsSection({ dict, locale }: NewsSectionProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   const news = dict.news;
@@ -58,6 +60,21 @@ export function NewsSection({ dict }: NewsSectionProps) {
           >
             {news.note}
           </motion.p>
+
+          {/* CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="text-center mt-10"
+          >
+            <Link
+              href={`/${locale}/news`}
+              className="btn-outline inline-block"
+            >
+              {locale === 'ja' ? 'ニュース一覧を見る' : 'View All News'}
+            </Link>
+          </motion.div>
         </div>
       </div>
     </section>

@@ -62,7 +62,7 @@ export function TeamSection({ dict, locale }: TeamSectionProps) {
           >
             <Link
               href={`/${locale}/team`}
-              className="inline-flex items-center justify-center px-8 py-4 border-4 border-[var(--foreground)] text-[var(--foreground)] font-medium hover:bg-[var(--foreground)] hover:text-[var(--background)] transition-all duration-300"
+              className="btn-outline inline-block"
             >
               {locale === 'ja' ? 'メンバー紹介を見る' : 'Meet Our Team'}
             </Link>

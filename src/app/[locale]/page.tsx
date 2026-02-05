@@ -27,7 +27,7 @@ export default async function HomePage({ params }: Props) {
         <ApproachSection dict={dict} />
         <ResearchSection dict={dict} locale={locale as Locale} />
         <TeamSection dict={dict} locale={locale as Locale} />
-        <NewsSection dict={dict} />
+        <NewsSection dict={dict} locale={locale as Locale} />
         <ContactSection dict={dict} locale={locale as Locale} />
       </main>
       <Footer dict={dict} locale={locale as Locale} />
