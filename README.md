@@ -109,5 +109,6 @@ All rights reserved. This project is for the Yamagishi Laboratory at Tokyo Unive
 
 ## Contact
 
-For inquiries about the website or research collaboration:
-- Email: yamagishi@ntech.t.u-tokyo.ac.jp (remove "nospam-" prefix)
+For inquiries about the website:
+- 横田研究室 青木
+- Email: aoki@ntech.t.u-tokyo.ac.jp
