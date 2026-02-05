@@ -116,12 +116,94 @@
 
 ---
 
-## サイトについて
+## 開発者向け情報
 
-- **フレームワーク**: Next.js 16
-- **CMS**: Sanity
-- **ホスティング**: Vercel
-- **多言語対応**: 日本語 / 英語
+### 技術スタック
+
+| 項目 | 技術 |
+|------|------|
+| フレームワーク | Next.js 16 (App Router) |
+| 言語 | TypeScript |
+| スタイリング | Tailwind CSS |
+| アニメーション | Framer Motion |
+| CMS | Sanity |
+| ホスティング | Vercel |
+| 多言語対応 | 日本語 / 英語 |
+
+### ローカル開発
+
+```bash
+# リポジトリをクローン
+git clone https://github.com/FallseF/yamagishi-lab.git
+cd yamagishi-lab
+
+# 依存関係をインストール
+npm install
+
+# 開発サーバーを起動
+npm run dev
+```
+
+http://localhost:3000 でサイトを確認できます。
+
+### 環境変数
+
+`.env.local` ファイルを作成：
+
+```
+NEXT_PUBLIC_SANITY_PROJECT_ID=8kch9h5v
+NEXT_PUBLIC_SANITY_DATASET=production
+```
+
+### Vercelへのデプロイ
+
+GitHub連携なしでCLIから直接デプロイする方法：
+
+```bash
+# Vercelにログイン（クライアントのアカウント）
+vercel login
+
+# プロダクションデプロイ
+vercel --prod
+```
+
+### Sanity初期データのインポート
+
+1. Sanity管理画面でAPIトークンを作成
+   - https://www.sanity.io/manage/project/8kch9h5v/api
+   - Permissions: Editor
+
+2. スクリプトを実行
+   ```bash
+   SANITY_API_TOKEN='your-token' node scripts/import-to-sanity.mjs
+   ```
+
+3. 使用後はトークンを削除
+
+### プロジェクト構成
+
+```
+src/
+├── app/
+│   ├── [locale]/          # 多言語ルーティング
+│   │   ├── page.tsx       # トップページ
+│   │   ├── research/      # 研究ページ
+│   │   ├── team/          # チームページ
+│   │   ├── achievements/  # 業績ページ
+│   │   ├── news/          # ニュースページ
+│   │   └── contact/       # お問い合わせページ
+│   └── studio/            # Sanity Studio
+├── components/            # UIコンポーネント
+├── sanity/               # Sanity設定・スキーマ
+├── dictionaries/         # 多言語辞書（静的テキスト）
+└── lib/                  # ユーティリティ
+```
+
+### 関連リンク
+
+- **Sanity管理画面**: https://www.sanity.io/manage/project/8kch9h5v
+- **Vercelダッシュボード**: https://vercel.com/yamagishilabhps-projects/yamagishi-lab
+- **GitHubリポジトリ**: https://github.com/FallseF/yamagishi-lab
 
 ---
 
