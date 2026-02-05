@@ -27,7 +27,7 @@ export function ApproachSection({ dict }: ApproachSectionProps) {
             <h2 className="text-sm md:text-base font-bold tracking-[0.2em] text-[var(--foreground)] mb-8">
               {approach.title}
             </h2>
-            <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-[var(--foreground)] whitespace-pre-line">
+            <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-[var(--foreground)] text-multiline">
               {approach.catchphrase}
             </p>
           </motion.div>

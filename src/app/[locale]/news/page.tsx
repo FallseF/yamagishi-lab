@@ -35,7 +35,7 @@ export default async function NewsPage({ params }: Props) {
               <h1 className="text-sm md:text-base font-bold tracking-[0.2em] text-[var(--foreground)] mb-8">
                 {news.title}
               </h1>
-              <p className="text-3xl md:text-4xl font-bold mb-8 text-[var(--foreground)] whitespace-pre-line leading-tight">
+              <p className="text-3xl md:text-4xl font-bold mb-8 text-[var(--foreground)] text-multiline leading-tight">
                 {news.catchphrase}
               </p>
             </FadeIn>

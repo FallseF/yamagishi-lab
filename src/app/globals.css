@@ -46,6 +46,13 @@ body {
   letter-spacing: 0.02em;
 }
 
+/* Cross-browser line break support */
+.text-multiline {
+  white-space: pre-line;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
 /* Monochrome accent background */
 .bg-blue-accent {
   background: var(--background);

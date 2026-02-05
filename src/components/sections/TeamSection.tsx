@@ -30,10 +30,10 @@ export function TeamSection({ dict, locale }: TeamSectionProps) {
             <h2 className="text-sm md:text-base font-bold tracking-[0.2em] text-[var(--foreground)] mb-8">
               {team.title}
             </h2>
-            <p className="text-2xl md:text-3xl font-bold text-[var(--foreground)] mb-4 whitespace-pre-line">
+            <p className="text-2xl md:text-3xl font-bold text-[var(--foreground)] mb-4 text-multiline">
               {team.catchphrase}
             </p>
-            <p className="text-[var(--muted)] max-w-2xl mx-auto whitespace-pre-line">
+            <p className="text-[var(--muted)] max-w-2xl mx-auto text-multiline">
               {team.description}
             </p>
           </motion.div>

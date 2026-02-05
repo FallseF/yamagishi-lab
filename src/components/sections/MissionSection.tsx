@@ -29,12 +29,12 @@ export function MissionSection({ dict }: MissionSectionProps) {
             </h2>
 
             {/* Catchphrase */}
-            <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--foreground)] leading-tight mb-10 whitespace-pre-line">
+            <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--foreground)] leading-tight mb-10 text-multiline">
               {mission.catchphrase}
             </p>
 
             {/* Description */}
-            <p className="text-base md:text-lg text-[var(--muted)] leading-loose max-w-2xl mx-auto whitespace-pre-line">
+            <p className="text-base md:text-lg text-[var(--muted)] leading-loose max-w-2xl mx-auto text-multiline">
               {mission.description}
             </p>
           </motion.div>

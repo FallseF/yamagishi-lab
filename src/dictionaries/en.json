@@ -72,8 +72,8 @@
   },
   "research": {
     "title": "RESEARCH",
-    "catchphrase": "Ultrathin Film Technology for Body-Harmonized Electronics",
-    "lead": "Based on nano- to micrometer-thick ultrathin materials and flexible electronic devices, we are developing next-generation sensing and therapeutic systems that harmonize with biological tissues.",
+    "catchphrase": "Ultrathin Film Technology\nfor Body-Harmonized Electronics",
+    "lead": "Based on nano- to micrometer-thick ultrathin materials and flexible electronic devices,\nwe are developing next-generation sensing and therapeutic systems that harmonize with biological tissues.",
     "areas": [
       {
         "title": "Research Area 1: Electronic Nanopatch for Sports Applications",
@@ -174,7 +174,7 @@
   },
   "news": {
     "title": "NEWS",
-    "catchphrase": "Latest Updates from Our Lab",
+    "catchphrase": "Latest Updates\nfrom Our Lab",
     "note": "Please replace sample dates and texts with actual updates.",
     "items": [
       { "date": "2026.02", "text": "Website refreshed with new lab sections (sample)." },
@@ -341,8 +341,8 @@
     "labName": "Yamagishi Lab",
     "university": "Tokyo University of Agriculture and Technology",
     "department": "",
-    "catchphrase": "Creating new human-technology relationships through ultrathin electronics",
-    "description": "We advance the future of healthcare, sports, and robotics through research on ultrathin materials and flexible electronic devices.",
+    "catchphrase": "Creating new human-technology relationships\nthrough ultrathin electronics",
+    "description": "We advance the future of healthcare, sports, and robotics\nthrough research on ultrathin materials and flexible electronic devices.",
     "highlights": [
       {
         "title": "Ultrathin Devices",
@@ -367,19 +367,19 @@
     "title": "CONTACT",
     "sectionTitle": "Get in Touch with Our Lab",
     "cta": "Get in Touch",
-    "description": "We welcome inquiries about research collaborations, lab visits, and any other questions. Please feel free to reach out.",
+    "description": "We welcome inquiries about research collaborations, lab visits,\nand any other questions. Please feel free to reach out.",
     "email": "yamagishi@ntech.t.u-tokyo.ac.jp",
     "emailNote": "(Please remove \"nospam-\" when sending an email.)",
     "displayEmail": "nospam-yamagishi@ntech.t.u-tokyo.ac.jp"
   },
   "mission": {
     "title": "MISSION",
-    "catchphrase": "Creating Electronics in Harmony with the Human Body",
-    "description": "Through research on ultrathin materials and flexible electronic devices, we aim to create new sensing and therapeutic technologies that naturally harmonize with the human body. We realize 'measure, connect, and heal' without interfering with natural body movements, contributing to the future of healthcare, sports, and robotics."
+    "catchphrase": "Creating Electronics\nin Harmony with the Human Body",
+    "description": "Through research on ultrathin materials and flexible electronic devices,\nwe aim to create new sensing and therapeutic technologies\nthat naturally harmonize with the human body.\n\nWe realize 'measure, connect, and heal' without interfering with natural body movements,\ncontributing to the future of healthcare, sports, and robotics."
   },
   "approach": {
     "title": "APPROACH",
-    "catchphrase": "An Integrated Research Approach from Fundamentals to Applications",
+    "catchphrase": "An Integrated Research Approach\nfrom Fundamentals to Applications",
     "steps": [
       {
         "number": "01",
@@ -403,8 +403,8 @@
   },
   "team": {
     "title": "TEAM",
-    "catchphrase": "Creating the Future Across Boundaries",
-    "description": "Members with diverse backgrounds collaborate on research, crossing the boundaries of materials, mechanics, electronics, and biology.",
+    "catchphrase": "Creating the Future\nAcross Boundaries",
+    "description": "Members with diverse backgrounds collaborate on research,\ncrossing the boundaries of materials, mechanics, electronics, and biology.",
     "categories": {
       "faculty": "Faculty",
       "phd": "PhD Students",

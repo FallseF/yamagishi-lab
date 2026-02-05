@@ -103,7 +103,7 @@ export function HeroSection({ dict, locale }: HeroSectionProps) {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-6 leading-relaxed whitespace-pre-line"
+            className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-6 leading-relaxed text-multiline"
           >
             {landing.catchphrase}
           </motion.p>
@@ -113,7 +113,7 @@ export function HeroSection({ dict, locale }: HeroSectionProps) {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-base text-white/70 max-w-xl mx-auto mb-12 whitespace-pre-line"
+            className="text-base text-white/70 max-w-xl mx-auto mb-12 text-multiline"
           >
             {landing.description}
           </motion.p>

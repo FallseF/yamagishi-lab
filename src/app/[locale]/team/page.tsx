@@ -39,10 +39,10 @@ export default async function TeamPage({ params }: Props) {
               <h1 className="text-sm md:text-base font-bold tracking-[0.2em] text-[var(--foreground)] mb-8">
                 {team.title}
               </h1>
-              <p className="text-3xl md:text-4xl font-bold mb-8 text-[var(--foreground)] whitespace-pre-line leading-tight">
+              <p className="text-3xl md:text-4xl font-bold mb-8 text-[var(--foreground)] text-multiline leading-tight">
                 {team.catchphrase}
               </p>
-              <p className="text-base text-[var(--muted)] max-w-2xl mx-auto whitespace-pre-line leading-relaxed">
+              <p className="text-base text-[var(--muted)] max-w-2xl mx-auto text-multiline leading-relaxed">
                 {team.description}
               </p>
             </FadeIn>

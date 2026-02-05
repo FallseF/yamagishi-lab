@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -18,6 +19,18 @@ type NavItem = {
 
 export function Header({ dict, locale }: HeaderProps) {
   const pathname = usePathname();
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // 初期状態をチェック
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navItems: NavItem[] = [
     { href: `/${locale}/research`, label: dict.nav.research },
@@ -37,9 +50,9 @@ export function Header({ dict, locale }: HeaderProps) {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-[var(--nav-bg)]"
+      className="fixed top-0 left-0 right-0 z-50 bg-[var(--nav-bg)] transition-all duration-300"
     >
-      <nav className="px-[30px] py-[30px]">
+      <nav className={`px-[30px] transition-all duration-300 ${isScrolled ? 'py-[15px]' : 'py-[30px]'}`}>
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link

@@ -15,6 +15,7 @@ export function Footer({ dict, locale = 'ja' }: FooterProps) {
     { href: `/${locale}/research`, label: dict.nav.research },
     { href: `/${locale}/team`, label: dict.nav.team },
     { href: `/${locale}/achievements`, label: dict.nav.achievements },
+    { href: `/${locale}/news`, label: dict.nav.news },
     { href: `/${locale}/contact`, label: dict.nav.contact },
   ];
 
