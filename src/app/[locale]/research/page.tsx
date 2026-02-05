@@ -7,7 +7,6 @@ import { urlFor } from '@/sanity/client';
 import Image from 'next/image';
 import type { Locale } from '@/types';
 import type { Metadata } from 'next';
-import type { SanityImageSource } from '@sanity/image-url/lib/types/types';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -16,7 +15,8 @@ type Props = {
 type ResearchArea = {
   _id: string;
   title: { ja?: string; en?: string };
-  image?: SanityImageSource;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  image?: any;
   summary: {
     challenge: { ja?: string; en?: string };
     approach: { ja?: string; en?: string };
