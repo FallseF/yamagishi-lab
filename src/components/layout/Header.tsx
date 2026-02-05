@@ -20,7 +20,6 @@ export function Header({ dict, locale }: HeaderProps) {
   const pathname = usePathname();
 
   const navItems: NavItem[] = [
-    { href: `/${locale}#mission`, label: dict.nav.mission },
     { href: `/${locale}/research`, label: dict.nav.research },
     { href: `/${locale}/team`, label: dict.nav.team },
     { href: `/${locale}/achievements`, label: dict.nav.achievements },

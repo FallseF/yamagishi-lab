@@ -12,7 +12,6 @@ export function Footer({ dict, locale = 'ja' }: FooterProps) {
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
-    { href: `/${locale}#mission`, label: dict.nav.mission },
     { href: `/${locale}/research`, label: dict.nav.research },
     { href: `/${locale}/team`, label: dict.nav.team },
     { href: `/${locale}/achievements`, label: dict.nav.achievements },
