@@ -1,0 +1,450 @@
+{
+  "metadata": {
+    "title": "山岸研究室 - 東京農工大学",
+    "description": "超薄膜・伸縮電子デバイスを基盤に、生体計測・医療・スポーツへと橋渡しする研究を行っています。"
+  },
+  "pages": {
+    "home": {
+      "title": "山岸研究室",
+      "description": "東京農工大学"
+    },
+    "members": {
+      "title": "メンバー",
+      "description": "山岸研究室のメンバー紹介"
+    },
+    "team": {
+      "title": "チーム",
+      "description": "山岸研究室のチーム紹介"
+    },
+    "contact": {
+      "title": "お問い合わせ",
+      "description": "山岸研究室へのお問い合わせ"
+    },
+    "access": {
+      "title": "アクセス",
+      "description": "山岸研究室へのアクセス情報"
+    }
+  },
+  "nav": {
+    "home": "HOME",
+    "mission": "MISSION",
+    "approach": "APPROACH",
+    "research": "RESEARCH",
+    "team": "TEAM",
+    "achievements": "ACHIEVEMENTS",
+    "news": "NEWS",
+    "access": "ACCESS",
+    "contact": "CONTACT",
+    "overview": "研究室概要",
+    "members": "メンバー",
+    "recruiting": "学生募集"
+  },
+  "hero": {
+    "name": "山岸 健人",
+    "nameEn": "Kento Yamagishi",
+    "role": "東京農工大学 准教授",
+    "tagline": "超薄膜・伸縮電子デバイスを基盤に、生体計測・医療・スポーツへと橋渡しする研究を行っています。",
+    "badges": ["超薄膜デバイス", "バイオエレクトロニクス", "ウェアラブル", "無線給電"],
+    "ctaPrimary": "配属・見学の相談",
+    "ctaSecondary": "研究を見る"
+  },
+  "overview": {
+    "title": "研究室概要",
+    "lead": "超薄膜材料と柔軟電子デバイスの開発を軸に、ヒトや生体組織と調和する新しい計測・治療技術の創出を目指しています。",
+    "cards": [
+      {
+        "title": "ミッション",
+        "content": "身体の自然な動きを妨げずに「測る・つなぐ・治す」を実現するデバイスを創る。"
+      },
+      {
+        "title": "研究の強み",
+        "items": [
+          "ナノ〜ミクロン厚の高分子薄膜技術",
+          "生体適合な無線給電・伸縮配線の設計",
+          "医療・スポーツ・ロボットへの応用展開"
+        ]
+      },
+      {
+        "title": "学生へのメッセージ",
+        "content": "材料・機械・電気・生体の境界で挑戦したい方を歓迎します。見学や相談は気軽にどうぞ。"
+      }
+    ]
+  },
+  "research": {
+    "title": "RESEARCH",
+    "catchphrase": "超薄膜技術が拓く、\n身体と調和するエレクトロニクス",
+    "lead": "ナノ〜マイクロメートル厚の超薄膜材料と柔軟電子デバイスを基盤に、\n生体組織と調和する次世代の計測・治療システムの実現に取り組んでいます。",
+    "areas": [
+      {
+        "title": "研究分野1: スポーツ応用に向けた電子ナノ絆創膏",
+        "image": "/images/research1.png",
+        "summary": {
+          "challenge": "手のひらや足の裏での筋電位計測が困難。",
+          "approach": "数百nmの導電性高分子薄膜を皮膚に直接貼付。",
+          "outcome": "投球中の手のひら筋電位を世界で初めて計測。"
+        },
+        "description": [
+          "従来のウェアラブルデバイスは、手のひらや足の裏など感覚が繊細で摩擦が生じやすい部位に装着すると運動の邪魔になってしまい、筋肉の動き（表面筋電位）を計測することは非常に困難です。そこで、導電性高分子からなるナノ薄膜（膜厚数百nm）を創製し、皮膚に直接貼り付ける生体電極「電子ナノ絆創膏」として応用してきました。",
+          "電子ナノ絆創膏は、その超薄性と柔軟性から接着剤を介さずにファンデルワールス力のみを介して皮膚表面に貼付可能であり、市販の医療用ゲル電極と同等のシグナル－ノイズ比にて表面筋電位を計測可能です。さらに、装着者本来の動きを妨げず、激しい運動に対しても安定な電気的接続を可能にするウェアラブル伸縮配線を新たに開発しました。これを電子ナノ絆創膏と組み合わせることで、野球経験者の投球中の手のひらの表面筋電位を計測することに世界で初めて成功しました。"
+        ]
+      },
+      {
+        "title": "研究分野2: 光がん治療応用に向けた体内埋め込み型無線発光デバイス",
+        "image": "/images/research2.png",
+        "summary": {
+          "challenge": "腫瘍と光源の位置ずれで治療効果が低下。",
+          "approach": "生体接着性を高めた高分子薄膜＋無線給電LED。",
+          "outcome": "体内組織にシールのように貼付できる発光デバイス。"
+        },
+        "description": [
+          "病巣部分に光増感剤を集積させ、そこに光を照射することにより発生する活性酸素でがんを死滅させる光線力学療法（Photodynamic therapy: PDT）では、腫瘍と光源の位置が少しでもずれると治療効果が得られないため、生体内の臓器や組織上に長期間安定に固定できる発光デバイスの開発が望まれていました。",
+          "そこで、「イガイ」が分泌する接着タンパク質を模した高分子化合物ポリドーパミンを修飾することで生体組織への接着性を大幅に向上させた高分子ナノ薄膜を新たに創製し、無線給電式LEDを組み合わせることで、体内の組織表面にシールのように貼り付けられる発光デバイスを開発しました。"
+        ]
+      },
+      {
+        "title": "研究分野3: 生体組織の形状や変形に適合する超薄膜液体金属デバイス",
+        "image": "/images/research3.png",
+        "summary": {
+          "challenge": "伸縮デバイスの柔軟性・接着性の低下。",
+          "approach": "超薄膜エラストマー上へ液体金属回路を形成。",
+          "outcome": "生体・ソフトロボットに適合するデバイス設計指針。"
+        },
+        "description": [
+          "ガリウムを主成分とする液体金属（EGaInやガリンスタン）は、常温で液体であり、低毒性でかつ高電気伝導性を有しているため、伸縮可能な電子デバイスの開発に幅広く利用されています。しかし、基材が厚くなるためデバイス全体の柔軟性や接着性に課題がありました。",
+          "そこで私たちは、直接インク描画（DIW）3次元印刷技術を用いて、厚さ数ミクロンのシリコーンエラストマー超薄膜上に液体金属からなる電子回路を形成する技術を新たに確立しました。この技術は、ヒト、動物、およびソフトロボットなどに機械的に適合する柔軟で伸縮可能な電子デバイスの設計・製造指針に新たな可能性を提供することが期待されています。"
+        ]
+      }
+    ]
+  },
+  "members": {
+    "title": "メンバー",
+    "note": "卒業生・共同研究者の情報は随時追加可能です。",
+    "pi": {
+      "name": "山岸 健人",
+      "role": "准教授 / PI",
+      "focus": "超薄膜デバイス、バイオエレクトロニクス、無線給電"
+    },
+    "placeholders": [
+      {
+        "initial": "D",
+        "title": "博士課程",
+        "role": "メンバー追加予定",
+        "focus": "研究テーマ、氏名、写真を掲載"
+      },
+      {
+        "initial": "M",
+        "title": "修士課程",
+        "role": "メンバー追加予定",
+        "focus": "研究テーマ、氏名、写真を掲載"
+      },
+      {
+        "initial": "B",
+        "title": "学部生",
+        "role": "メンバー追加予定",
+        "focus": "卒業研究テーマ、氏名を掲載"
+      }
+    ]
+  },
+  "recruiting": {
+    "title": "学生募集",
+    "lead": "材料・機械・電気・生体が交差する研究を一緒に進める学生を歓迎します。配属や見学の相談はいつでも可能です。",
+    "cards": [
+      {
+        "title": "研究テーマ例",
+        "items": [
+          "超薄膜材料を用いたウェアラブルセンサ設計",
+          "無線給電による体内埋め込みデバイス",
+          "液体金属回路の3Dプリント応用"
+        ]
+      },
+      {
+        "title": "指導方針",
+        "items": [
+          "基礎実験とプロトタイプ開発を両立",
+          "論文執筆と発表の機会を重視",
+          "分野横断の議論とチーム開発"
+        ]
+      },
+      {
+        "title": "配属・見学",
+        "content": "メールでご連絡ください。件名に「配属希望」または「見学希望」を入れていただくとスムーズです。",
+        "note": "研究室説明会の開催情報はニュース欄で告知します。"
+      }
+    ]
+  },
+  "news": {
+    "title": "NEWS",
+    "catchphrase": "研究室からの\n最新のお知らせ",
+    "note": "※日付と内容は更新時に差し替えてください。",
+    "items": [
+      { "date": "2026.02", "text": "研究室HPを更新しました（例）。" },
+      { "date": "2026.01", "text": "新しい研究テーマの紹介ページを公開（例）。" },
+      { "date": "2025.12", "text": "学会発表の報告を追加（例）。" }
+    ]
+  },
+  "achievements": {
+    "title": "業績",
+    "publications": {
+      "title": "主な論文",
+      "items": [
+        {
+          "authors": "K. Yamagishi, W. Zhou, T. Ching, S. Y. Huang, M. Hashimoto",
+          "title": "Ultra-deformable and tissue-adhesive liquid metal antennas with high wireless powering efficiency",
+          "journal": "Adv. Mater., 33, 2008062 (2021)",
+          "doi": "https://doi.org/10.1002/adma.202008062",
+          "note": "Highlighted by EurekAlert! and Physics World"
+        },
+        {
+          "authors": "T. Sato, K. Yamagishi, M. Hashimoto, E. Iwase",
+          "title": "Method to Reduce the Contact Resistivity between Galinstan and a Copper Electrode for Electrical Connection in Flexible Devices",
+          "journal": "ACS Appl. Mater. Interfaces, 13, 18247–18254 (2021)",
+          "doi": "https://doi.org/10.1021/acsami.1c00431"
+        },
+        {
+          "authors": "H. Fujita, K. Yamagishi, W. Zhou, S. Y. Huang, M. Hashimoto, T. Fujie",
+          "title": "Design and fabrication of a flexible glucose sensing platform toward rapid battery-free detection of hyperglycaemia",
+          "journal": "J. Mater. Chem. C, 9, 7336 (2021)",
+          "doi": "https://doi.org/10.1039/D1TC00667C"
+        },
+        {
+          "authors": "K. Yamagishi, T. Nakanishi, S. Mihara, M. Azuma, S. Takeoka, K. Kanosue, T. Nagami, T. Fujie",
+          "title": "Elastic kirigami patch for electromyographic analysis of the palm muscle during baseball pitching",
+          "journal": "NPG Asia Mater., 11, 80 (2019)",
+          "doi": "https://doi.org/10.1038/s41427-019-0183-1",
+          "note": "Highlighted by EurekAlert! and Japanese online news site AbemaNews"
+        },
+        {
+          "authors": "K. Yamagishi, A. Nojiri, E. Iwase, M. Hashimoto",
+          "title": "Syringe-injectable, self-expandable, and ultraconformable magnetic ultrathin films",
+          "journal": "ACS Appl. Mater. Interfaces, 11, 41770−41779 (2019)",
+          "doi": "https://doi.org/10.1021/acsami.9b17567",
+          "note": "Highlighted by EurekAlert!"
+        },
+        {
+          "authors": "K. Hatakeyama-Sato, H. Wakamatsu, K. Yamagishi, T. Fujie, S. Takeoka, K. Oyaizu, H. Nishide",
+          "title": "Ultrathin and stretchable rechargeable devices with organic polymer nanosheets conformable to skin surface",
+          "journal": "Small, 15, 1805296 (2019)",
+          "doi": "https://doi.org/10.1002/smll.201805296",
+          "note": "Selected as Inside Front Cover"
+        },
+        {
+          "authors": "K. Yamagishi, I. Kirino, I. Takahashi, H. Amano, S. Takeoka, Y. Morimoto, T. Fujie",
+          "title": "Tissue-adhesive wirelessly powered optoelectronic device for metronomic photodynamic cancer therapy",
+          "journal": "Nat. Biomed. Eng., 3, 27-36 (2019)",
+          "doi": "https://doi.org/10.1038/s41551-018-0261-7",
+          "note": "Highlighted by EurekAlert! and Behind the Paper"
+        },
+        {
+          "authors": "Y. Tetsu†, K. Yamagishi†, A. Kato, Y. Matsumoto, M. Tsukune, Y. Kobayashi, M. G. Fujie, S. Takeoka, T. Fujie",
+          "title": "An ultrathin epidermal strain sensor based on an elastomer nanosheet with an inkjet-printed conductive polymer",
+          "journal": "Appl. Phys. Expr., 10, 087201 (2017)",
+          "doi": "https://doi.org/10.7567/APEX.10.087201",
+          "note": "†Equal contribution"
+        },
+        {
+          "authors": "A. Zucca†, K. Yamagishi†, T. Fujie, S. Takeoka, V. Mattoli, F. Greco",
+          "title": "Roll to roll processing of ultraconformable conducting polymer nanosheets",
+          "journal": "J. Mater. Chem. C, 3, 6539-6548 (2015)",
+          "doi": "https://doi.org/10.1039/C5TC00750J",
+          "note": "†Equal contribution"
+        },
+        {
+          "authors": "K. Yamagishi, K. Sawaki, A. Murata, S. Takeoka",
+          "title": "A Cu-free clickable fluorescent probe for intracellular targeting of small biomolecules",
+          "journal": "Chem. Commun., 51, 7879-7882 (2015)",
+          "doi": "https://doi.org/10.1039/C4CC09947H"
+        }
+      ]
+    },
+    "awards": {
+      "title": "受賞",
+      "items": [
+        { "date": "2021年6月", "title": "FSE Best Presentation Award, The 2nd Event of Young Researchers Society for Flexible and Stretchable Electronics" },
+        { "date": "2020年12月", "title": "FSE Gold Award, The 1st Event of Young Researchers Society for Flexible and Stretchable Electronics" },
+        { "date": "2019年12月", "title": "IFMBE Young Investigator Award, 2nd Prize, The 17th International Conference on Biomedical Engineering（ICBME 2019）" },
+        { "date": "2018年6月", "title": "第57回日本生体医工学会 研究奨励賞・阿部賞" },
+        { "date": "2016年12月", "title": "第23回日本血液代替物学会年次大会 優秀演題賞" },
+        { "date": "2016年10月", "title": "薄膜材料デバイス研究会 第13回研究集会 ベストペーパーアワー" },
+        { "date": "2015年11月", "title": "第24回ポリマー材料フォーラム 優秀発表賞" },
+        { "date": "2015年9月", "title": "第39回（2015年秋季）応用物理学会 講演奨励賞" },
+        { "date": "2014年8月", "title": "第9回相模ケイ素・材料フォーラム 最優秀ポスター賞" }
+      ]
+    },
+    "grants": {
+      "title": "外部資金",
+      "placeholder": "掲載準備中（研究費情報を追加してください）。"
+    }
+  },
+  "biography": {
+    "title": "略歴",
+    "education": {
+      "title": "学歴",
+      "items": [
+        { "date": "平成25年3月", "text": "早稲田大学 先進理工学部 生命医科学科 卒業" },
+        { "date": "平成27年3月", "text": "早稲田大学大学院 先進理工学研究科 生命医科学専攻 修士課程修了" },
+        { "date": "平成30年3月", "text": "早稲田大学大学院 先進理工学研究科 先進理工学専攻 5年一貫制博士課程（3年次編入）修了，博士（工学）" }
+      ]
+    },
+    "career": {
+      "title": "職歴",
+      "items": [
+        { "date": "平成28年4月", "text": "早稲田大学大学院 先進理工学研究科 生体分子集合科学／ナノ医工学研究室 特別研究員（DC2）" },
+        { "date": "平成30年4月", "text": "早稲田大学 ナノ・ライフ創新研究機構 次席研究員" },
+        { "date": "平成30年7月", "text": "シンガポール工科デザイン大学 Digital Manufacturing and Design (DManD) Centre 博士研究員" },
+        { "date": "令和3年7月", "text": "ノースウェスタン大学 Center for Bio-Integrated Electronics 博士研究員" },
+        { "date": "令和5年10月", "text": "東京大学 工学系研究科 講師" },
+        { "date": "令和7年4月", "text": "東京農工大学 准教授（現在に至る）" }
+      ]
+    }
+  },
+  "collaboration": {
+    "title": "共同研究・設備",
+    "cards": [
+      {
+        "title": "共同研究",
+        "content": "医療・スポーツ・ロボティクス分野における共同研究や技術相談を歓迎します。テーマや期間は柔軟にご相談ください。"
+      },
+      {
+        "title": "設備",
+        "content": "設備情報は掲載準備中です。必要に応じて個別にご案内します。"
+      }
+    ]
+  },
+  "labLife": {
+    "title": "研究室ライフ",
+    "placeholders": [
+      "セミナーやイベントの写真・動画を追加予定です。",
+      "研究室の日常風景を掲載できます。"
+    ],
+    "note": "写真が揃い次第、ギャラリー形式で更新します。"
+  },
+  "access": {
+    "title": "アクセス",
+    "address": "〒184-8588 東京都小金井市中町2-24-16 東京農工大学 小金井キャンパス",
+    "details": {
+      "building": "工学部",
+      "room": "",
+      "campus": "小金井キャンパス",
+      "postal": "〒184-8588",
+      "addressLine": "東京都小金井市中町2-24-16"
+    },
+    "directions": {
+      "title": "交通案内",
+      "items": [
+        "JR中央線「東小金井」駅南口 徒歩約10分",
+        "JR中央線「武蔵小金井」駅北口 徒歩約20分"
+      ]
+    },
+    "mapNote": ""
+  },
+  "landing": {
+    "labName": "山岸研究室",
+    "university": "東京農工大学",
+    "department": "",
+    "catchphrase": "超薄膜エレクトロニクスで、\nヒトと技術の新しい関係を創る",
+    "description": "私たちは超薄膜材料と柔軟電子デバイスの研究を通じて、\n医療・スポーツ・ロボティクスの未来に貢献します。",
+    "highlights": [
+      {
+        "title": "超薄膜デバイス",
+        "description": "ナノメートル〜マイクロメートル厚の高分子薄膜技術"
+      },
+      {
+        "title": "バイオエレクトロニクス",
+        "description": "生体組織と調和する電子デバイスの開発"
+      },
+      {
+        "title": "無線給電",
+        "description": "体内埋め込みデバイスへのワイヤレス電力供給"
+      }
+    ],
+    "cta": {
+      "research": "研究内容を見る",
+      "members": "メンバー紹介",
+      "contact": "お問い合わせ"
+    }
+  },
+  "contact": {
+    "title": "CONTACT",
+    "sectionTitle": "研究室へのお問い合わせ",
+    "cta": "お問い合わせはこちら",
+    "description": "共同研究のご相談、研究室見学のお申し込み、\nその他ご質問など、お気軽にお問い合わせください。",
+    "email": "yamagishi@ntech.t.u-tokyo.ac.jp",
+    "emailNote": "(メールを送信する場合は\"nospam-\"を取り除いて送信してください。)",
+    "displayEmail": "nospam-yamagishi@ntech.t.u-tokyo.ac.jp"
+  },
+  "mission": {
+    "title": "MISSION",
+    "catchphrase": "身体と調和する\nエレクトロニクスを創造する",
+    "description": "私たちは、超薄膜材料と柔軟電子デバイスの研究を通じて、\nヒトの身体と自然に調和する新しい計測・治療技術の創出を目指しています。\n\n身体の自然な動きを妨げることなく「測る・つなぐ・治す」を実現し、\n医療・スポーツ・ロボティクスの未来に貢献します。"
+  },
+  "approach": {
+    "title": "APPROACH",
+    "catchphrase": "基礎から応用まで、\n一貫した研究アプローチ",
+    "steps": [
+      {
+        "number": "01",
+        "title": "SCIENCE",
+        "subtitle": "基礎科学",
+        "description": "ナノ〜マイクロメートル厚の高分子薄膜の物性を解明し、生体適合性と機能性を両立する新しい材料設計の基盤を築きます。"
+      },
+      {
+        "number": "02",
+        "title": "TECHNOLOGY",
+        "subtitle": "技術開発",
+        "description": "基礎研究で得られた知見を活かし、生体電極・無線給電・伸縮配線など、実用可能な要素技術を開発します。"
+      },
+      {
+        "number": "03",
+        "title": "APPLICATION",
+        "subtitle": "社会実装",
+        "description": "開発した技術を医療・スポーツ・ロボティクス分野へ展開し、社会課題の解決に貢献します。"
+      }
+    ]
+  },
+  "team": {
+    "title": "TEAM",
+    "catchphrase": "領域を越境しながら\n未来を創る",
+    "description": "材料・機械・電気・生体の境界を超えて、\n多様なバックグラウンドを持つメンバーが協力しながら研究を進めています。",
+    "categories": {
+      "faculty": "教員",
+      "phd": "博士課程",
+      "master": "修士課程",
+      "bachelor": "学部生",
+      "alumni": "卒業生"
+    }
+  },
+  "forApplicants": {
+    "title": "FOR APPLICANTS",
+    "subtitle": "配属・進学を希望される方へ",
+    "description": "当研究室では、材料・機械・電気・生体が交差する研究を一緒に進める学生を歓迎します。研究室見学や配属相談は随時受け付けていますので、お気軽にご連絡ください。",
+    "points": [
+      {
+        "title": "研究環境",
+        "description": "最新の設備と、分野横断的な研究環境で、独創的な研究に取り組めます。"
+      },
+      {
+        "title": "指導方針",
+        "description": "基礎実験とプロトタイプ開発を両立し、論文執筆・学会発表の機会を重視します。"
+      },
+      {
+        "title": "進路",
+        "description": "アカデミア・産業界の両方で活躍できる人材を育成します。"
+      }
+    ],
+    "cta": "研究室見学を申し込む"
+  },
+  "stats": {
+    "publications": "論文数",
+    "members": "メンバー",
+    "projects": "プロジェクト",
+    "awards": "受賞"
+  },
+  "common": {
+    "switchLanguage": "English",
+    "darkMode": "ダークモード",
+    "lightMode": "ライトモード",
+    "challenge": "課題",
+    "approach": "アプローチ",
+    "outcome": "成果"
+  }
+}

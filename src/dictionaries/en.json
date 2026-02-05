@@ -1,0 +1,450 @@
+{
+  "metadata": {
+    "title": "Yamagishi Lab - Tokyo University of Agriculture and Technology",
+    "description": "We develop ultra-thin and stretchable bio-integrated electronics that connect sensing, healthcare, and sports performance."
+  },
+  "pages": {
+    "home": {
+      "title": "Yamagishi Lab",
+      "description": "Tokyo University of Agriculture and Technology"
+    },
+    "members": {
+      "title": "Members",
+      "description": "Members of Yamagishi Lab"
+    },
+    "team": {
+      "title": "Team",
+      "description": "Yamagishi Lab Team"
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Contact Yamagishi Lab"
+    },
+    "access": {
+      "title": "Access",
+      "description": "Access information for Yamagishi Lab"
+    }
+  },
+  "nav": {
+    "home": "HOME",
+    "mission": "MISSION",
+    "approach": "APPROACH",
+    "research": "RESEARCH",
+    "team": "TEAM",
+    "achievements": "ACHIEVEMENTS",
+    "news": "NEWS",
+    "access": "ACCESS",
+    "contact": "CONTACT",
+    "overview": "Overview",
+    "members": "Members",
+    "recruiting": "Prospective Students"
+  },
+  "hero": {
+    "name": "Kento Yamagishi",
+    "nameEn": "Kento Yamagishi",
+    "role": "Associate Professor, Tokyo University of Agriculture and Technology",
+    "tagline": "We develop ultra-thin and stretchable bio-integrated electronics that connect sensing, healthcare, and sports performance.",
+    "badges": ["Ultrathin Devices", "Bioelectronics", "Wearables", "Wireless Powering"],
+    "ctaPrimary": "Join the Lab",
+    "ctaSecondary": "Explore Research"
+  },
+  "overview": {
+    "title": "Laboratory Overview",
+    "lead": "We create bio-integrated devices based on ultrathin materials and flexible electronics to enable new modes of sensing and therapy.",
+    "cards": [
+      {
+        "title": "Mission",
+        "content": "Enable seamless \"measure-connect-treat\" technologies without interfering with natural human movement."
+      },
+      {
+        "title": "Strengths",
+        "items": [
+          "Nanoscale polymer film fabrication",
+          "Wireless powering and stretchable interconnects",
+          "Applications in medicine, sports, and robotics"
+        ]
+      },
+      {
+        "title": "Message to Students",
+        "content": "We welcome students who enjoy crossing boundaries between materials, mechanics, electronics, and biology."
+      }
+    ]
+  },
+  "research": {
+    "title": "RESEARCH",
+    "catchphrase": "Ultrathin Film Technology\nfor Body-Harmonized Electronics",
+    "lead": "Based on nano- to micrometer-thick ultrathin materials and flexible electronic devices,\nwe are developing next-generation sensing and therapeutic systems that harmonize with biological tissues.",
+    "areas": [
+      {
+        "title": "Research Area 1: Electronic Nanopatch for Sports Applications",
+        "image": "/images/research1.png",
+        "summary": {
+          "challenge": "sEMG measurement is difficult on high-friction areas like palms.",
+          "approach": "Use ultra-thin conductive polymer films as bioelectrodes.",
+          "outcome": "World-first palm sEMG recording during pitching."
+        },
+        "description": [
+          "Conventional wearable devices are obstructive when worn on sensitive areas of the body, such as the palms or soles, where friction is high, making it extremely challenging to measure muscle activity (surface electromyography, sEMG). To address this, we have developed an ultra-thin conductive polymer film (several hundred nm thick) that can be used as a \"nano electronic patch\" directly attached to the skin as a bioelectrode.",
+          "Due to its ultra-thinness and flexibility, the nano electronic patch adheres to the skin surface using only van der Waals forces, without requiring adhesives, and achieves comparable signal-to-noise ratios to commercially available gel electrodes for measuring sEMG. Furthermore, we developed new wearable and stretchable interconnects that do not hinder the wearer's natural movements and provide stable electrical connections even during intense physical activities. Combining this with the nano electronic patch, we successfully measured surface sEMG of the palm during baseball pitching, a world first."
+        ]
+      },
+      {
+        "title": "Research Area 2: Implantable Wireless Light-Emitting Device for Photodynamic Cancer Therapy",
+        "image": "/images/research2.png",
+        "summary": {
+          "challenge": "Precise alignment is required for effective PDT.",
+          "approach": "Tissue-adhesive nanosheets with wirelessly powered LEDs.",
+          "outcome": "Sticker-like light sources stable on tissue surfaces."
+        },
+        "description": [
+          "Photodynamic therapy (PDT), which involves accumulating a photosensitizer at the tumor site and irradiating it with light to produce reactive oxygen species that kill cancer cells, requires the precise positioning of the tumor and light source. Thus, a stable, long-term light-emitting device that can be affixed to internal organs or tissues has been sought.",
+          "We developed a new polymer nanosheet modified with polydopamine, a compound mimicking the adhesive proteins secreted by mussels, greatly enhancing adhesion to biological tissues. Combining this nanosheet with a wirelessly powered LED, we created a light-emitting device that can be affixed to tissue surfaces like a sticker."
+        ]
+      },
+      {
+        "title": "Research Area 3: Ultra-thin Liquid Metal Devices for Conforming to Biological Tissues",
+        "image": "/images/research3.png",
+        "summary": {
+          "challenge": "Thick substrates reduce flexibility and adhesion.",
+          "approach": "DIW 3D printing of liquid metal circuits on ultrathin elastomers.",
+          "outcome": "New design guidelines for conformable electronics."
+        },
+        "description": [
+          "Liquid metals such as EGaIn or Galinstan, primarily composed of gallium, are liquid at room temperature, exhibit low toxicity, and possess high electrical conductivity, making them ideal for developing stretchable electronic devices. However, thick substrates used in such devices have posed challenges in terms of flexibility and adhesion.",
+          "We established a new technique using Direct Ink Writing (DIW) 3D printing to form electronic circuits composed of liquid metals on ultra-thin silicone elastomer substrates, just a few microns thick. This technique is expected to provide new possibilities for the design and manufacture of flexible and stretchable electronic devices that can mechanically conform to humans, animals, and soft robots."
+        ]
+      }
+    ]
+  },
+  "members": {
+    "title": "Members",
+    "note": "Alumni and collaborators can be added in the same format.",
+    "pi": {
+      "name": "Kento Yamagishi",
+      "role": "Principal Investigator",
+      "focus": "Ultrathin devices, bioelectronics, wireless powering"
+    },
+    "placeholders": [
+      {
+        "initial": "PhD",
+        "title": "PhD Students",
+        "role": "Member list coming soon",
+        "focus": "Names, topics, and photos will be added"
+      },
+      {
+        "initial": "MS",
+        "title": "Master's Students",
+        "role": "Member list coming soon",
+        "focus": "Names, topics, and photos will be added"
+      },
+      {
+        "initial": "BS",
+        "title": "Undergraduate Students",
+        "role": "Member list coming soon",
+        "focus": "Names and project titles will be added"
+      }
+    ]
+  },
+  "recruiting": {
+    "title": "Prospective Students",
+    "lead": "We welcome students who want to work at the intersection of materials, electronics, and biomedical engineering. Please reach out for lab visits or discussions.",
+    "cards": [
+      {
+        "title": "Example Topics",
+        "items": [
+          "Wearable sensors using ultrathin materials",
+          "Implantable devices with wireless powering",
+          "Liquid-metal circuits fabricated by 3D printing"
+        ]
+      },
+      {
+        "title": "Mentoring Style",
+        "items": [
+          "Balanced emphasis on experiments and prototyping",
+          "Support for paper writing and presentations",
+          "Team-based, interdisciplinary problem solving"
+        ]
+      },
+      {
+        "title": "How to Join",
+        "content": "Please email us to schedule a visit. Use a subject line such as \"Lab Visit\" or \"Prospective Student\" for quick response.",
+        "note": "Updates about orientations will be posted in the news section."
+      }
+    ]
+  },
+  "news": {
+    "title": "NEWS",
+    "catchphrase": "Latest Updates\nfrom Our Lab",
+    "note": "Please replace sample dates and texts with actual updates.",
+    "items": [
+      { "date": "2026.02", "text": "Website refreshed with new lab sections (sample)." },
+      { "date": "2026.01", "text": "New research topic page added (sample)." },
+      { "date": "2025.12", "text": "Conference presentation update posted (sample)." }
+    ]
+  },
+  "achievements": {
+    "title": "Achievements",
+    "publications": {
+      "title": "Selected Publications",
+      "items": [
+        {
+          "authors": "K. Yamagishi, W. Zhou, T. Ching, S. Y. Huang, M. Hashimoto",
+          "title": "Ultra-deformable and tissue-adhesive liquid metal antennas with high wireless powering efficiency",
+          "journal": "Adv. Mater., 33, 2008062 (2021)",
+          "doi": "https://doi.org/10.1002/adma.202008062",
+          "note": "Highlighted by EurekAlert! and Physics World"
+        },
+        {
+          "authors": "T. Sato, K. Yamagishi, M. Hashimoto, E. Iwase",
+          "title": "Method to Reduce the Contact Resistivity between Galinstan and a Copper Electrode for Electrical Connection in Flexible Devices",
+          "journal": "ACS Appl. Mater. Interfaces, 13, 18247–18254 (2021)",
+          "doi": "https://doi.org/10.1021/acsami.1c00431"
+        },
+        {
+          "authors": "H. Fujita, K. Yamagishi, W. Zhou, S. Y. Huang, M. Hashimoto, T. Fujie",
+          "title": "Design and fabrication of a flexible glucose sensing platform toward rapid battery-free detection of hyperglycaemia",
+          "journal": "J. Mater. Chem. C, 9, 7336 (2021)",
+          "doi": "https://doi.org/10.1039/D1TC00667C"
+        },
+        {
+          "authors": "K. Yamagishi, T. Nakanishi, S. Mihara, M. Azuma, S. Takeoka, K. Kanosue, T. Nagami, T. Fujie",
+          "title": "Elastic kirigami patch for electromyographic analysis of the palm muscle during baseball pitching",
+          "journal": "NPG Asia Mater., 11, 80 (2019)",
+          "doi": "https://doi.org/10.1038/s41427-019-0183-1",
+          "note": "Highlighted by EurekAlert! and Japanese online news site AbemaNews"
+        },
+        {
+          "authors": "K. Yamagishi, A. Nojiri, E. Iwase, M. Hashimoto",
+          "title": "Syringe-injectable, self-expandable, and ultraconformable magnetic ultrathin films",
+          "journal": "ACS Appl. Mater. Interfaces, 11, 41770−41779 (2019)",
+          "doi": "https://doi.org/10.1021/acsami.9b17567",
+          "note": "Highlighted by EurekAlert!"
+        },
+        {
+          "authors": "K. Hatakeyama-Sato, H. Wakamatsu, K. Yamagishi, T. Fujie, S. Takeoka, K. Oyaizu, H. Nishide",
+          "title": "Ultrathin and stretchable rechargeable devices with organic polymer nanosheets conformable to skin surface",
+          "journal": "Small, 15, 1805296 (2019)",
+          "doi": "https://doi.org/10.1002/smll.201805296",
+          "note": "Selected as Inside Front Cover"
+        },
+        {
+          "authors": "K. Yamagishi, I. Kirino, I. Takahashi, H. Amano, S. Takeoka, Y. Morimoto, T. Fujie",
+          "title": "Tissue-adhesive wirelessly powered optoelectronic device for metronomic photodynamic cancer therapy",
+          "journal": "Nat. Biomed. Eng., 3, 27-36 (2019)",
+          "doi": "https://doi.org/10.1038/s41551-018-0261-7",
+          "note": "Highlighted by EurekAlert! and Behind the Paper"
+        },
+        {
+          "authors": "Y. Tetsu†, K. Yamagishi†, A. Kato, Y. Matsumoto, M. Tsukune, Y. Kobayashi, M. G. Fujie, S. Takeoka, T. Fujie",
+          "title": "An ultrathin epidermal strain sensor based on an elastomer nanosheet with an inkjet-printed conductive polymer",
+          "journal": "Appl. Phys. Expr., 10, 087201 (2017)",
+          "doi": "https://doi.org/10.7567/APEX.10.087201",
+          "note": "†Equal contribution"
+        },
+        {
+          "authors": "A. Zucca†, K. Yamagishi†, T. Fujie, S. Takeoka, V. Mattoli, F. Greco",
+          "title": "Roll to roll processing of ultraconformable conducting polymer nanosheets",
+          "journal": "J. Mater. Chem. C, 3, 6539-6548 (2015)",
+          "doi": "https://doi.org/10.1039/C5TC00750J",
+          "note": "†Equal contribution"
+        },
+        {
+          "authors": "K. Yamagishi, K. Sawaki, A. Murata, S. Takeoka",
+          "title": "A Cu-free clickable fluorescent probe for intracellular targeting of small biomolecules",
+          "journal": "Chem. Commun., 51, 7879-7882 (2015)",
+          "doi": "https://doi.org/10.1039/C4CC09947H"
+        }
+      ]
+    },
+    "awards": {
+      "title": "Awards",
+      "items": [
+        { "date": "June 2021", "title": "FSE Best Presentation Award, The 2nd Event of Young Researchers Society for Flexible and Stretchable Electronics" },
+        { "date": "December 2020", "title": "FSE Gold Award, The 1st Event of Young Researchers Society for Flexible and Stretchable Electronics" },
+        { "date": "December 2019", "title": "IFMBE Young Investigator Award, 2nd Prize, The 17th International Conference on Biomedical Engineering (ICBME 2019)" },
+        { "date": "June 2018", "title": "57th Annual Meeting of the Japanese Society for Medical and Biological Engineering, Research Encouragement Award" },
+        { "date": "December 2016", "title": "Excellence in Presentation Award, 23rd Annual Meeting of the Japanese Society for Blood Substitutes" },
+        { "date": "October 2016", "title": "Best Paper Award, 13th Research Meeting on Thin Film Materials" },
+        { "date": "November 2015", "title": "Outstanding Presentation Award, 24th Polymer Materials Forum" },
+        { "date": "September 2015", "title": "Encouragement Award for Presentation, 39th (Autumn 2015) Meeting of the Japan Society of Applied Physics" },
+        { "date": "August 2014", "title": "Best Poster Award, 9th Sagami Silicon & Materials Forum" }
+      ]
+    },
+    "grants": {
+      "title": "Grants",
+      "placeholder": "Coming soon. Please add funding information."
+    }
+  },
+  "biography": {
+    "title": "Biography",
+    "education": {
+      "title": "Education",
+      "items": [
+        { "date": "March 2013", "text": "Graduated from Waseda University, School of Advanced Science and Engineering, Department of Life Science and Medical Bioscience" },
+        { "date": "March 2015", "text": "Completed Master's degree in Life Science and Medical Bioscience, Graduate School of Advanced Science and Engineering, Waseda University" },
+        { "date": "March 2018", "text": "Completed a 5-year Integrated Doctoral Program (entered in year 3), Graduate School of Advanced Science and Engineering, Waseda University; Doctor of Engineering" }
+      ]
+    },
+    "career": {
+      "title": "Appointments",
+      "items": [
+        { "date": "April 2016", "text": "Special Research Fellow (DC2), Laboratory of Biomolecular Assembly and Nanoengineering, Graduate School of Advanced Science and Engineering, Waseda University" },
+        { "date": "April 2018", "text": "Senior Researcher, Nano-Life Innovation Research Organization, Waseda University" },
+        { "date": "July 2018", "text": "Postdoctoral Fellow, Digital Manufacturing and Design (DManD) Centre, Singapore University of Technology and Design" },
+        { "date": "July 2021", "text": "Postdoctoral Fellow, Center for Bio-Integrated Electronics, Northwestern University" },
+        { "date": "October 2023", "text": "Lecturer, Graduate School of Engineering, The University of Tokyo" },
+        { "date": "April 2025", "text": "Associate Professor, Tokyo University of Agriculture and Technology (Present)" }
+      ]
+    }
+  },
+  "collaboration": {
+    "title": "Collaboration & Facilities",
+    "cards": [
+      {
+        "title": "Collaboration",
+        "content": "We welcome collaboration proposals in healthcare, sports, and robotics. Please contact us to discuss scope and timelines."
+      },
+      {
+        "title": "Facilities",
+        "content": "Facility details will be added. Please inquire for current capabilities."
+      }
+    ]
+  },
+  "labLife": {
+    "title": "Lab Life",
+    "placeholders": [
+      "Photos and highlights from seminars or events will be added.",
+      "Lab culture and daily activities can be showcased here."
+    ],
+    "note": "Gallery updates will be added as soon as materials are ready."
+  },
+  "access": {
+    "title": "Access",
+    "address": "Koganei Campus, Tokyo University of Agriculture and Technology, 2-24-16 Naka-cho, Koganei, Tokyo 184-8588, Japan",
+    "details": {
+      "building": "Faculty of Engineering",
+      "room": "",
+      "campus": "Koganei Campus",
+      "postal": "184-8588",
+      "addressLine": "2-24-16 Naka-cho, Koganei, Tokyo, Japan"
+    },
+    "directions": {
+      "title": "Directions",
+      "items": [
+        "10 min walk from Higashi-Koganei Station (JR Chuo Line, South Exit)",
+        "20 min walk from Musashi-Koganei Station (JR Chuo Line, North Exit)"
+      ]
+    },
+    "mapNote": ""
+  },
+  "landing": {
+    "labName": "Yamagishi Lab",
+    "university": "Tokyo University of Agriculture and Technology",
+    "department": "",
+    "catchphrase": "Creating new human-technology relationships\nthrough ultrathin electronics",
+    "description": "We advance the future of healthcare, sports, and robotics\nthrough research on ultrathin materials and flexible electronic devices.",
+    "highlights": [
+      {
+        "title": "Ultrathin Devices",
+        "description": "Nanometer to micrometer-thick polymer film technology"
+      },
+      {
+        "title": "Bioelectronics",
+        "description": "Electronic devices harmonized with biological tissues"
+      },
+      {
+        "title": "Wireless Powering",
+        "description": "Wireless power delivery for implantable devices"
+      }
+    ],
+    "cta": {
+      "research": "View Research",
+      "members": "Meet Our Team",
+      "contact": "Contact Us"
+    }
+  },
+  "contact": {
+    "title": "CONTACT",
+    "sectionTitle": "Get in Touch with Our Lab",
+    "cta": "Get in Touch",
+    "description": "We welcome inquiries about research collaborations, lab visits,\nand any other questions. Please feel free to reach out.",
+    "email": "yamagishi@ntech.t.u-tokyo.ac.jp",
+    "emailNote": "(Please remove \"nospam-\" when sending an email.)",
+    "displayEmail": "nospam-yamagishi@ntech.t.u-tokyo.ac.jp"
+  },
+  "mission": {
+    "title": "MISSION",
+    "catchphrase": "Creating Electronics\nin Harmony with the Human Body",
+    "description": "Through research on ultrathin materials and flexible electronic devices,\nwe aim to create new sensing and therapeutic technologies\nthat naturally harmonize with the human body.\n\nWe realize 'measure, connect, and heal' without interfering with natural body movements,\ncontributing to the future of healthcare, sports, and robotics."
+  },
+  "approach": {
+    "title": "APPROACH",
+    "catchphrase": "An Integrated Research Approach\nfrom Fundamentals to Applications",
+    "steps": [
+      {
+        "number": "01",
+        "title": "SCIENCE",
+        "subtitle": "Fundamental Research",
+        "description": "We elucidate the properties of nano- to micrometer-thick polymer thin films and build the foundation for new material designs that achieve both biocompatibility and functionality."
+      },
+      {
+        "number": "02",
+        "title": "TECHNOLOGY",
+        "subtitle": "Technology Development",
+        "description": "Leveraging insights from fundamental research, we develop practical elemental technologies such as bioelectrodes, wireless power transfer, and stretchable interconnects."
+      },
+      {
+        "number": "03",
+        "title": "APPLICATION",
+        "subtitle": "Social Implementation",
+        "description": "We deploy developed technologies to healthcare, sports, and robotics fields, contributing to solving social challenges."
+      }
+    ]
+  },
+  "team": {
+    "title": "TEAM",
+    "catchphrase": "Creating the Future\nAcross Boundaries",
+    "description": "Members with diverse backgrounds collaborate on research,\ncrossing the boundaries of materials, mechanics, electronics, and biology.",
+    "categories": {
+      "faculty": "Faculty",
+      "phd": "PhD Students",
+      "master": "Master's Students",
+      "bachelor": "Undergraduates",
+      "alumni": "Alumni"
+    }
+  },
+  "forApplicants": {
+    "title": "FOR APPLICANTS",
+    "subtitle": "For Prospective Students",
+    "description": "We welcome students who want to pursue research at the intersection of materials, mechanics, electronics, and biology. Lab visits and consultations are available anytime. Please feel free to contact us.",
+    "points": [
+      {
+        "title": "Research Environment",
+        "description": "State-of-the-art facilities and an interdisciplinary research environment enable innovative research."
+      },
+      {
+        "title": "Mentoring Style",
+        "description": "We balance fundamental experiments with prototype development, emphasizing paper writing and conference presentations."
+      },
+      {
+        "title": "Career Paths",
+        "description": "We nurture talent capable of thriving in both academia and industry."
+      }
+    ],
+    "cta": "Schedule a Lab Visit"
+  },
+  "stats": {
+    "publications": "Publications",
+    "members": "Members",
+    "projects": "Projects",
+    "awards": "Awards"
+  },
+  "common": {
+    "switchLanguage": "日本語",
+    "darkMode": "Dark Mode",
+    "lightMode": "Light Mode",
+    "challenge": "Challenge",
+    "approach": "Approach",
+    "outcome": "Outcome"
+  }
+}

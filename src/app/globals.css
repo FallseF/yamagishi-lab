@@ -1,26 +1,504 @@
 @import "tailwindcss";
 
 :root {
+  /* 牛場研究室スタイル - モノクローム */
   --background: #ffffff;
-  --foreground: #171717;
+  --background-secondary: #f8f8f8;
+  --foreground: #000000;
+  --muted: #666666;
+  --muted-light: #c3c3c3;
+  --accent: #000000;
+  --accent-dark: #000000;
+  --accent-light: #333333;
+  --card-bg: #ffffff;
+  --card-bg-rgb: 255, 255, 255;
+  --border: #000000;
+  --border-light: #e0e0e0;
+  --nav-bg: #ffffff;
+
+  /* スペーシング - vwベース */
+  --page-padding-desktop: calc(200 / 1560 * 100vw);
+  --page-padding-mobile: calc(40 / 750 * 100vw);
 }
+
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-dark: var(--accent-dark);
+  --color-accent-light: var(--accent-light);
+  --color-accent-light: var(--accent-light);
+  --color-card-bg: var(--card-bg);
+  --color-border: var(--border);
+  --color-nav-bg: var(--nav-bg);
+  --font-sans: 'Inter', 'Noto Sans JP', system-ui, sans-serif;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, "Yu Gothic", "游ゴシック", YuGothic, "Noto Sans JP", sans-serif;
+  font-size: 18px;
+  line-height: 2;
+  min-height: 100vh;
+  letter-spacing: 0.02em;
+}
+
+/* Monochrome accent background */
+.bg-blue-accent {
+  background: var(--background);
+  position: relative;
+}
+
+.bg-blue-accent::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(0, 0, 0, 0.03), transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Simple card - 牛場研究室スタイル */
+.glass-card {
+  background: var(--card-bg);
+}
+
+/* Card with subtle hover */
+.card-3d {
+  background: var(--card-bg);
+  transition: opacity 0.3s ease;
+}
+
+.card-3d:hover {
+  opacity: 0.7;
+}
+
+/* Modern card - シンプル版 */
+.glass-card-modern {
+  background: var(--card-bg);
+  transition: opacity 0.3s ease;
+}
+
+.glass-card-modern:hover {
+  opacity: 0.7;
+}
+
+/* Accent text */
+.accent-text {
+  color: var(--accent);
+}
+
+/* Blue heading */
+.blue-heading {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* Modern button - 牛場研究室スタイル（角型ボーダー） */
+.btn-modern {
+  display: inline-block;
+  padding: 16px 32px;
+  border: 4px solid var(--foreground);
+  background: transparent;
+  color: var(--foreground);
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  min-width: 200px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.btn-modern:hover {
+  background: var(--foreground);
+  color: var(--background);
+}
+
+/* Primary button */
+.btn-purple {
+  display: inline-block;
+  padding: 16px 32px;
+  border: 4px solid var(--foreground);
+  background: var(--foreground);
+  color: var(--background);
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  min-width: 200px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.btn-purple:hover {
+  background: transparent;
+  color: var(--foreground);
+}
+
+/* Outline button */
+.btn-outline {
+  display: inline-block;
+  padding: 16px 32px;
+  border: 4px solid var(--foreground);
+  background: transparent;
+  color: var(--foreground);
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  min-width: 200px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: var(--foreground);
+  color: var(--background);
+}
+
+/* Section divider */
+.section-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 3rem 0;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-dark);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Selection color */
+::selection {
+  background: var(--accent);
+  color: white;
+}
+
+/* Hero background with monochrome gradient */
+.hero-bg {
+  background: linear-gradient(180deg, var(--background) 0%, var(--background-secondary) 100%);
+  position: relative;
+}
+
+.hero-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1400px;
+  height: 500px;
+  background: radial-gradient(ellipse at center top, rgba(0, 0, 0, 0.04), transparent 70%);
+  pointer-events: none;
+}
+
+/* Monochrome decoration */
+.blue-decoration {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.04);
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+/* Image hover effect */
+.img-hover {
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.img-hover:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Badge style - monochrome */
+.badge {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  background: rgba(0, 0, 0, 0.06);
+  color: var(--foreground);
+  border: 1px solid var(--border);
+}
+
+
+/* Link style - 牛場研究室スタイル */
+a.link-blue {
+  color: var(--foreground);
+  text-decoration: underline;
+  transition: opacity 0.3s ease;
+}
+
+a.link-blue:hover {
+  opacity: 0.5;
+}
+
+/* 汎用リンクホバー */
+a {
+  transition: opacity 0.3s ease;
+}
+
+a:hover {
+  opacity: 0.5;
+}
+
+/* Section background */
+.section-dna-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-dna-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -10%;
+  width: 40%;
+  height: 100%;
+  background: radial-gradient(ellipse at right, rgba(0, 0, 0, 0.02), transparent 60%);
+  pointer-events: none;
+}
+
+/* Accent for highlights - monochrome */
+.text-cyan {
+  color: var(--accent);
+}
+
+/* Icon containers - monochrome */
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Button - 牛場研究室スタイル統一 */
+.btn-glass {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 32px;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  border: 4px solid var(--foreground);
+  background: transparent;
+  color: var(--foreground);
+  min-width: 200px;
+  transition: all 0.3s ease;
+}
+
+.btn-glass:hover {
+  background: var(--foreground);
+  color: var(--background);
+}
+
+.btn-glass-primary {
+  background: var(--foreground);
+  color: var(--background);
+  border: 4px solid var(--foreground);
+}
+
+.btn-glass-primary:hover {
+  background: transparent;
+  color: var(--foreground);
+}
+
+.btn-glass-secondary {
+  background: transparent;
+  border: 4px solid var(--foreground);
+  color: var(--foreground);
+}
+
+.btn-glass-ghost {
+  background: transparent;
+  border: none;
+  color: var(--foreground);
+  text-decoration: underline;
+}
+
+.btn-glass-ghost:hover {
+  opacity: 0.5;
+}
+
+/* Touch device active states */
+@media (hover: none) {
+  .card-3d:active,
+  .btn-modern:active,
+  .glass-card:active {
+    transform: scale(0.98);
+    opacity: 0.9;
+  }
+}
+
+/* Universal active states */
+.card-3d:active {
+  transform: translateY(-2px) scale(0.98);
+}
+
+.btn-modern:active {
+  transform: translateY(0) scale(0.97);
+}
+
+/* 3D Card Effect */
+.card-3d-tilt {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.card-3d-tilt-inner {
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  transform-style: preserve-3d;
+}
+
+.card-3d-tilt:hover .card-3d-tilt-inner {
+  transform: rotateX(5deg) rotateY(-5deg) translateZ(10px);
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Pulse glow effect */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); }
+  50% { box-shadow: 0 0 40px rgba(0, 0, 0, 0.3); }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Gradient text - モノクローム */
+.gradient-text {
+  color: var(--foreground);
+}
+
+/* Section with animated background */
+.section-animated-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-animated-bg::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.02) 0%, transparent 50%);
+  animation: rotate-bg 30s linear infinite;
+}
+
+@keyframes rotate-bg {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Image reveal animation */
+.img-reveal {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-reveal::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--accent);
+  transform: scaleX(1);
+  transform-origin: right;
+  transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.img-reveal.revealed::after {
+  transform: scaleX(0);
+}
+
+/* Stagger children animation */
+.stagger-children > * {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: stagger-in 0.6s ease forwards;
+}
+
+.stagger-children > *:nth-child(1) { animation-delay: 0.1s; }
+.stagger-children > *:nth-child(2) { animation-delay: 0.2s; }
+.stagger-children > *:nth-child(3) { animation-delay: 0.3s; }
+.stagger-children > *:nth-child(4) { animation-delay: 0.4s; }
+.stagger-children > *:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes stagger-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Number counter style */
+.number-highlight {
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--foreground);
+  line-height: 1;
+}
+
+/* Section title with line */
+.section-title-line {
+  position: relative;
+  display: inline-block;
+}
+
+.section-title-line::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 2px;
 }
