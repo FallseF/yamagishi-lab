@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import type { Dictionary, Locale } from '@/types';
 
 interface FooterProps {
@@ -72,10 +73,24 @@ export function Footer({ dict, locale = 'ja' }: FooterProps) {
           </div>
 
           {/* Copyright */}
-          <div className="pt-8 border-t border-white/20">
+          <div className="pt-8 border-t border-white/20 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <p className="text-sm text-white/50">
               © {currentYear} {dict.landing.labName}. All rights reserved.
             </p>
+            <a
+              href="https://www.tuat.ac.jp/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-70 transition-opacity"
+            >
+              <Image
+                src="/images/tuat-logo.jpg"
+                alt="東京農工大学 Tokyo University of Agriculture and Technology"
+                width={160}
+                height={40}
+                className="h-12 w-auto"
+              />
+            </a>
           </div>
         </div>
       </div>

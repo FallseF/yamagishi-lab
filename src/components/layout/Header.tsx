@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import type { Dictionary, Locale } from '@/types';
 
@@ -21,6 +20,9 @@ export function Header({ dict, locale }: HeaderProps) {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
 
+  // トップページかどうか判定（/ja または /en のみ）
+  const isTopPage = pathname === `/${locale}` || pathname === `/${locale}/`;
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -31,6 +33,9 @@ export function Header({ dict, locale }: HeaderProps) {
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // サブページまたはスクロール時は黒文字
+  const useDarkText = !isTopPage || isScrolled;
 
   const navItems: NavItem[] = [
     { href: `/${locale}/research`, label: dict.nav.research },
@@ -50,16 +55,28 @@ export function Header({ dict, locale }: HeaderProps) {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-[var(--nav-bg)] transition-all duration-300"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled
+          ? 'bg-white/80 backdrop-blur-md'
+          : 'bg-transparent'
+      }`}
     >
-      <nav className={`px-[30px] transition-all duration-300 ${isScrolled ? 'py-[15px]' : 'py-[30px]'}`}>
+      <nav
+        className="px-[30px] transition-all duration-300 ease-out"
+        style={{ paddingTop: isScrolled ? 12 : 40, paddingBottom: isScrolled ? 12 : 40 }}
+      >
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link
             href={`/${locale}`}
-            className="hover:opacity-50 transition-opacity"
+            className="hover:opacity-50 transition-all duration-300"
           >
-            <span className="text-base font-bold text-[var(--foreground)] tracking-tight">
+            <span
+              className={`font-bold tracking-tight transition-all duration-300 ease-out ${
+                useDarkText ? 'text-[var(--foreground)]' : 'text-white'
+              }`}
+              style={{ fontSize: isScrolled ? 16 : 22 }}
+            >
               {dict.landing.labName}
             </span>
           </Link>
@@ -70,7 +87,10 @@ export function Header({ dict, locale }: HeaderProps) {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="text-[14px] text-[var(--foreground)] font-medium hover:opacity-50 transition-opacity"
+                  className={`font-medium hover:opacity-50 transition-all duration-300 ease-out ${
+                    useDarkText ? 'text-[var(--foreground)]' : 'text-white'
+                  }`}
+                  style={{ fontSize: isScrolled ? 13 : 15 }}
                 >
                   {item.label}
                 </Link>
@@ -83,24 +103,15 @@ export function Header({ dict, locale }: HeaderProps) {
             <Link
               href={switchedLocalePath}
               scroll={false}
-              className="text-[14px] text-[var(--foreground)] font-medium border-b border-[var(--foreground)] hover:opacity-50 transition-opacity"
+              className={`font-medium border-b hover:opacity-50 transition-all duration-300 ease-out ${
+                useDarkText
+                  ? 'text-[var(--foreground)] border-[var(--foreground)]'
+                  : 'text-white border-white'
+              }`}
+              style={{ fontSize: isScrolled ? 13 : 15 }}
             >
               {dict.common.switchLanguage}
             </Link>
-            <a
-              href="https://www.tuat.ac.jp/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:opacity-70 transition-opacity hidden md:block"
-            >
-              <Image
-                src="/images/tuat-logo.jpg"
-                alt="東京農工大学 Tokyo University of Agriculture and Technology"
-                width={160}
-                height={40}
-                className="h-8 w-auto"
-              />
-            </a>
           </div>
         </div>
       </nav>
